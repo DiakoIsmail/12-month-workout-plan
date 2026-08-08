@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// GitHub Pages projektsida: https://<user>.github.io/12-month-workoutplan/
-const base = '/12-month-workoutplan/'
+// GitHub Pages projektsida: https://<user>.github.io/12-month-workout-plan/
+const base = '/12-month-workout-plan/'
 
 export default defineConfig({
   base,

@@ -1,10 +1,10 @@
-# 12-månaders träningsplan — Gym & Core
+# 12-month-workout-plan
 
 En Vue 3-app (PWA) för "Kombinerad Träningskalender": Gym Split 4 dagar + Ab & Core-program,
 10 aug 2026 – 10 aug 2027. Bocka av varje gympass och core-pass direkt i kalendern — allt sparas
 lokalt på din telefon (localStorage), ingen server eller inloggning behövs.
 
-**Live:** https://diakoismail.github.io/12-month-workoutplan/
+**Live:** https://diakoismail.github.io/12-month-workout-plan/
 
 ## Funktioner
 
@@ -28,15 +28,10 @@ npm run preview   # förhandsgranska produktionsbygget
 ## Deploy till GitHub Pages
 
 Deploy sker automatiskt via GitHub Actions (`.github/workflows/deploy.yml`) vid varje push till
-`main`. Första gången:
+`main`. Pages-källan är satt till **GitHub Actions** i repots inställningar (Settings → Pages).
 
-1. Skapa ett tomt repo på GitHub som heter `12-month-workoutplan`.
-2. Pusha den här mappen till repot (se kommandon nedan).
-3. I repot: **Settings → Pages → Source: GitHub Actions**.
-4. Vänta på att workflowen ("Deploy to GitHub Pages") blir grön under fliken **Actions**.
-5. Appen är sedan live på `https://<ditt-användarnamn>.github.io/12-month-workoutplan/`.
-
-Om du byter repo-namn eller användarnamn, uppdatera `base` i [vite.config.js](vite.config.js).
+Om du byter repo-namn eller användarnamn, uppdatera `base` i [vite.config.js](vite.config.js)
+så att den matchar `/<repo-namn>/`.
 
 ## Data & integritet
 
@@ -48,4 +43,3 @@ om du vill kunna återställa datan på en ny enhet.
 
 Övningar, scheman och kalenderlogik är transkriberade/härledda från PDF:en
 *"Kombinerad Träningskalender — Gym Split + Ab & Core"* (v3, 2026–2027).
-# 12-month-workout-plan
