@@ -1,0 +1,158 @@
+:root {
+  --bg: #f4f5f7;
+  --bg-elevated: #ffffff;
+  --bg-inset: #eceef2;
+  --text: #1a1d23;
+  --text-dim: #62697a;
+  --border: #dfe2e8;
+  --accent: #3462e0;
+  --accent-text: #ffffff;
+  --danger: #d64545;
+  --success: #1e9e5a;
+
+  --gym1: #2f7fe0;   /* D1 Ben & Axlar (Mån) */
+  --gym1-bg: #e4eefc;
+  --gym2: #8b5cf6;   /* D2 Bröst/Bi/Tri */
+  --gym2-bg: #ede6fd;
+  --gym3: #0891b2;   /* D3 Ben & Axlar (Tor) */
+  --gym3-bg: #dbf3f8;
+  --gym4: #e0812f;   /* D4 Rygg */
+  --gym4-bg: #fbe9d8;
+
+  --core1: #1e9e5a;  /* Fas 1 Foundation */
+  --core1-bg: #dff5e8;
+  --core2: #2f7fe0;  /* Fas 2 Strength */
+  --core2-bg: #e4eefc;
+  --core3: #b3711f;  /* Fas 3 Power */
+  --core3-bg: #f7ead4;
+  --core4: #d6396b;  /* Fas 4 Peak */
+  --core4-bg: #fbe0ea;
+
+  --deload: #7c5cd6;
+  --deload-bg: #ece5fb;
+  --rest: #9aa1af;
+  --rest-bg: #eceef2;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 1px 2px rgba(20, 22, 30, 0.06), 0 4px 14px rgba(20, 22, 30, 0.05);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161c;
+    --bg-elevated: #1d2027;
+    --bg-inset: #23262f;
+    --text: #eef0f4;
+    --text-dim: #9199ab;
+    --border: #2c303b;
+    --accent: #6a92ff;
+    --accent-text: #0b1020;
+    --danger: #ff6b6b;
+    --success: #3ddc84;
+
+    --gym1: #5b9bff;
+    --gym1-bg: #1c2b47;
+    --gym2: #a78bfa;
+    --gym2-bg: #2a2242;
+    --gym3: #22c3e6;
+    --gym3-bg: #123138;
+    --gym4: #f2a35c;
+    --gym4-bg: #3a2a17;
+
+    --core1: #3ddc84;
+    --core1-bg: #123424;
+    --core2: #5b9bff;
+    --core2-bg: #1c2b47;
+    --core3: #e0ab55;
+    --core3-bg: #3a2c14;
+    --core4: #f0679f;
+    --core4-bg: #3a1c2b;
+
+    --deload: #a78bfa;
+    --deload-bg: #2a2242;
+    --rest: #71798c;
+    --rest-bg: #23262f;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+#app {
+  max-width: 560px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+h1, h2, h3 { margin: 0; line-height: 1.25; }
+p { margin: 0; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.btn-block { width: 100%; }
+
+.scrollbar-hidden::-webkit-scrollbar { display: none; }
+.scrollbar-hidden { scrollbar-width: none; -ms-overflow-style: none; }
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
